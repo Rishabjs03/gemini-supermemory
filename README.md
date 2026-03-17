@@ -1,8 +1,8 @@
-# gemini-supermemory
+# Gemini-Supermemory
 
 > **✨ Requires [Supermemory Pro or above](https://app.supermemory.ai/?view=integrations)** — Unlock the state of the art memory for your Gemini CLI.
 
-A Gemini CLI extension that gives your AI persistent memory across sessions using [Supermemory](https://supermemory.ai).
+A [Gemini CLI](https://github.com/google-gemini/gemini-cli) extension that gives your AI **persistent memory across sessions** using [Supermemory](https://supermemory.ai).
 Your agent remembers what you worked on — across sessions, across projects.
 
 ## Features
@@ -24,7 +24,7 @@ Set your API key when prompted (get one at [app.supermemory.ai](https://app.supe
 
 ## How It Works
 
-Your extension exposes 3 MCP tools that Gemini calls automatically:
+Your extension exposes **3 MCP tools** that Gemini calls automatically:
 
 | Tool | Description |
 | --- | --- |
@@ -32,7 +32,7 @@ Your extension exposes 3 MCP tools that Gemini calls automatically:
 | `add_memory` | Save personal memories (decisions, preferences, learnings) |
 | `save_project_memory` | Save team/project knowledge (architecture, conventions) |
 
-Plus two lifecycle hooks:
+Plus **two lifecycle hooks** that run behind the scenes:
 
 | Hook | Trigger | What it does |
 | --- | --- | --- |
@@ -58,6 +58,8 @@ Or set via environment variable:
 ```bash
 export SUPERMEMORY_API_KEY="sm_..."
 ```
+
+---
 
 **Project Config** — Create `.gemini/.supermemory/config.json` in your repo root:
 
