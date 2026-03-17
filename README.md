@@ -1,6 +1,6 @@
 # Gemini-Supermemory
 
-> **✨ Requires [Supermemory Pro or above](https://app.supermemory.ai/?view=integrations)** — Unlock the state of the art memory for your Gemini CLI.
+![Gemini-Supermemory Logo](readme_logo.png)
 
 A [Gemini CLI](https://github.com/google-gemini/gemini-cli) extension that gives your AI **persistent memory across sessions** using [Supermemory](https://supermemory.ai).
 Your agent remembers what you worked on — across sessions, across projects.
