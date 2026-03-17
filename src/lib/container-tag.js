@@ -2,6 +2,7 @@ import crypto from "node:crypto";
 import path from "node:path";
 import { getGitRepoName, getGitRoot } from "./git-utils.js";
 import { validateContainerTag } from "./validate.js";
+import { getProjectContainerOverrides } from "./project-config.js";
 
 function sha256(input) {
   return crypto.createHash("sha256").update(input).digest("hex").slice(0, 16);
@@ -49,11 +50,15 @@ export function getProjectName(cwd = process.cwd()) {
 }
 
 export function getPersonalContainerTag(cwd = process.cwd()) {
+  const overrides = getProjectContainerOverrides(cwd);
+  if (overrides.personalContainerTag) return overrides.personalContainerTag;
   const basePath = getProjectBasePath(cwd);
   return buildValidatedTag("gemini_user", sha256(basePath), basePath);
 }
 
 export function getRepoContainerTag(cwd = process.cwd()) {
+  const overrides = getProjectContainerOverrides(cwd);
+  if (overrides.repoContainerTag) return overrides.repoContainerTag;
   const projectName = getProjectName(cwd);
   return buildValidatedTag("repo", projectName, `${cwd}:${projectName}`);
 }

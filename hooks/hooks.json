@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "name": "supermemory-context-loader",
+            "type": "command",
+            "command": "node ${extensionPath}${/}src${/}hooks${/}session-start.js",
+            "timeout": 15000
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "name": "supermemory-session-saver",
+            "type": "command",
+            "command": "node ${extensionPath}${/}src${/}hooks${/}session-end.js",
+            "timeout": 15000
+          }
+        ]
+      }
+    ]
+  }
+}

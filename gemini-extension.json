@@ -1,0 +1,23 @@
+{
+    "name": "gemini-supermemory",
+    "version": "1.0.0",
+    "description": "Persistent memory for Gemini CLI using Supermemory",
+    "settings": [
+        {
+            "name": "Supermemory API Key",
+            "description": "Your API key from app.supermemory.ai",
+            "envVar": "SUPERMEMORY_API_KEY",
+            "sensitive": true
+        }
+    ],
+    "contextFileName": "GEMINI.md",
+    "mcpServers": {
+        "supermemory": {
+            "command": "node",
+            "args": [
+                "${extensionPath}${/}src${/}server.js"
+            ],
+            "cwd": "${extensionPath}"
+        }
+    }
+}

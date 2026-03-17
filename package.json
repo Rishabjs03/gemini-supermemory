@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "Persistent memory for Gemini CLI using Supermemory",
   "type": "module",
-  "scripts": {
-    "build": "node scripts/build.js"
-  },
+  "scripts": {},
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0",
-    "supermemory": "^1.0.0"
+    "supermemory": "^4.0.0",
+    "zod": "^4.3.6"
   }
 }

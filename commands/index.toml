@@ -1,0 +1,33 @@
+description = "Index this codebase's architecture and patterns into Supermemory"
+
+prompt = """
+Explore this codebase deeply and save your findings to Supermemory using the `save_project_memory` tool.
+
+## What to Analyze
+
+1. **Project Overview**: Read README.md, package.json (or equivalent manifest), and config files to understand the tech stack, how to build/run/test.
+
+2. **Architecture**: Use file listing and reading to map out the folder structure, entry points, key modules, and data flow.
+
+3. **Conventions**: Identify naming conventions, file organization patterns, import styles, and coding patterns used throughout the project.
+
+4. **Key Files**: Read auth logic, database setup, API clients, shared utilities, and any important middleware or configuration.
+
+## Rules
+- Make 20-50 tool calls to explore thoroughly
+- Skip: node_modules, .git, build outputs, lock files, generated files
+- Focus on understanding HOW the codebase works, not every line of code
+
+## Final Step
+
+After exploring, compile ALL findings into ONE comprehensive summary and save it using:
+
+**save_project_memory** with a single detailed message containing:
+- Tech stack and dependencies
+- Architecture and folder structure
+- Key patterns and conventions
+- Important files and what they do
+- How to build, run, and test
+
+Start exploring now.
+"""
